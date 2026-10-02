@@ -93,9 +93,12 @@
       <h2 id="work-title">CollabEdit — real-time documents, built from scratch</h2>
       <p class="section-lead">A Google Docs–style editor with live cursors, offline editing, version history, full-text search and link sharing. I wrote the sync server, storage and auth myself on FastAPI, Yjs/pycrdt, PostgreSQL and Redis, and run it on free-tier hosting.</p>
 
-      <figure class="shot" id="collabedit-shot" hidden>
+      <figure class="shot">
         <div class="shot-bar" aria-hidden="true"><span></span><span></span><span></span><em>collaborative-editor-flax.vercel.app</em></div>
-        <img src="assets/collabedit.png" width="1600" height="1000" alt="CollabEdit: a document open in the editor with another user's live cursor and presence avatars">
+        <picture>
+          <source srcset="assets/collabedit.webp" type="image/webp">
+          <img src="assets/collabedit.png" width="1600" height="1257" alt="CollabEdit: two people editing the same document. Rahul's caret and name appear live in Priya's window, with both avatars and All changes synced in the header." loading="lazy">
+        </picture>
       </figure>
 
       <div class="grid features">
