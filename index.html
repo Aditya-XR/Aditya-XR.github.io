@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aditya Kumar — Backend &amp; Real-time Systems</title>
+  <meta name="description" content="Aditya Kumar — final-year CSE at BIT Mesra, building real-time backends (CRDT sync, Postgres, Redis) with merged open-source work in Microsoft's Agent Framework. Open to SDE-1 / new-grad roles.">
+  <meta name="author" content="Aditya Kumar">
+  <link rel="canonical" href="https://aditya-xr.github.io/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Aditya Kumar — Backend &amp; Real-time Systems">
+  <meta property="og:description" content="Real-time backends, open-source fixes, and a live collaborative editor built from scratch. Open to SDE-1 / new-grad roles.">
+  <meta property="og:url" content="https://aditya-xr.github.io/">
+  <meta property="og:image" content="https://aditya-xr.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply a saved theme before first paint so the page never flashes the wrong colours.
+    try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (_) {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aditya Kumar",
+    "url": "https://aditya-xr.github.io/",
+    "image": "https://aditya-xr.github.io/assets/aditya.jpg",
+    "jobTitle": "Software Engineer (new grad, 2027)",
+    "alumniOf": "Birla Institute of Technology, Mesra",
+    "sameAs": [
+      "https://github.com/Aditya-XR",
+      "https://www.linkedin.com/in/aditya-kumar-37b82627b",
+      "https://leetcode.com/u/adityaccds/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Aditya Kumar, back to top"><span class="brand-mark" aria-hidden="true">AK</span><span class="brand-name">Aditya Kumar</span></a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#open-source">Open source</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <div class="hero-text">
+        <p class="status"><span class="dot" aria-hidden="true"></span>Open to SDE-1 / new-grad roles · 2027</p>
+        <h1>Aditya Kumar</h1>
+        <p class="lead">I build the backend of real-time products — sync servers, edit logs, rate limiters — and fix bugs in the open-source tools I use. Final-year Computer Science at <strong>BIT Mesra</strong>.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="mailto:adityaccds@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Zm1.8.3 7.2 5.6 7.2-5.6"/></svg>Email me</a>
+          <a class="btn" href="https://github.com/Aditya-XR">
+            <svg viewBox="0 0 16 16" aria-hidden="true" class="fill"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/aditya-kumar-37b82627b">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>LinkedIn</a>
+        </div>
+      </div>
+      <picture class="portrait">
+        <source srcset="assets/aditya.webp" type="image/webp">
+        <img src="assets/aditya.jpg" width="480" height="480" alt="Portrait of Aditya Kumar">
+      </picture>
+    </section>
+
+    <section class="wrap stats" aria-label="Highlights">
+      <div class="stat"><strong><!-- MERGED:START -->5<!-- MERGED:END --></strong><span>merged open-source pull requests, including Microsoft's Agent Framework</span></div>
+      <div class="stat"><strong>250+</strong><span>automated tests behind CollabEdit, run in CI on every push</span></div>
+      <div class="stat"><strong>70<small>th</small></strong><span>of 8,500+ teams in the Amazon ML Challenge 2026</span></div>
+      <div class="stat"><strong>1<small>st</small></strong><span>place at Hatch From Scratch for an AR indoor-navigation app</span></div>
+    </section>
+
+    <section class="section wrap" id="work" aria-labelledby="work-title">
+      <p class="eyebrow">Featured project</p>
+      <h2 id="work-title">CollabEdit — real-time documents, built from scratch</h2>
+      <p class="section-lead">A Google Docs–style editor with live cursors, offline editing, version history, full-text search and link sharing. I wrote the sync server, storage and auth myself on FastAPI, Yjs/pycrdt, PostgreSQL and Redis, and run it on free-tier hosting.</p>
+
+      <figure class="shot" id="collabedit-shot" hidden>
+        <div class="shot-bar" aria-hidden="true"><span></span><span></span><span></span><em>collaborative-editor-flax.vercel.app</em></div>
+        <img src="assets/collabedit.png" width="1600" height="1000" alt="CollabEdit: a document open in the editor with another user's live cursor and presence avatars">
+      </figure>
+
+      <div class="grid features">
+        <article class="card">
+          <h3>Own CRDT sync server</h3>
+          <p>FastAPI WebSockets speak the Yjs sync and awareness protocols over pycrdt (Rust Yrs): one room per open document, per-connection send queues, and roles enforced on every update. Edits reach other users in about 110&nbsp;ms in production.</p>
+        </article>
+        <article class="card">
+          <h3>Edit log + compaction</h3>
+          <p>Every edit lands in an append-only Postgres log, batched every 500&nbsp;ms, then folds into snapshots under an advisory lock. Opening a 10,000-keystroke document went from <strong>218&nbsp;ms to 17&nbsp;ms</strong>.</p>
+        </article>
+        <article class="card">
+          <h3>Self-built rate limiter</h3>
+          <p>A token bucket in a single Redis Lua script: atomic across API instances, in one round trip, with fail-open or fail-closed per policy.</p>
+        </article>
+        <article class="card">
+          <h3>Careful sessions</h3>
+          <p>Argon2id passwords, 15-minute JWTs, rotating refresh tokens with reuse detection, and one-time 30-second WebSocket tickets.</p>
+        </article>
+        <article class="card">
+          <h3>Offline-first</h3>
+          <p>The browser keeps an IndexedDB copy of each document; edits made offline merge automatically when the connection comes back.</p>
+        </article>
+        <article class="card">
+          <h3>Tested and documented</h3>
+          <p>173 API tests against real Postgres and Redis — including Hypothesis convergence properties — plus 79 web tests, and 10 architecture decision records.</p>
+        </article>
+      </div>
+
+      <ul class="chips" aria-label="CollabEdit tech stack">
+        <li>FastAPI</li><li>pycrdt / Yjs</li><li>PostgreSQL</li><li>Redis</li><li>SQLAlchemy</li><li>React 19</li><li>TypeScript</li><li>Tiptap</li><li>Docker</li><li>GitHub Actions</li><li>Render</li><li>Vercel</li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://collaborative-editor-flax.vercel.app">Try it live</a>
+        <a class="btn" href="https://github.com/Aditya-XR/collaborative-editor">Source code</a>
+        <a class="btn" href="https://github.com/Aditya-XR/collaborative-editor/tree/main/docs/adr">Design decisions</a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="open-source" aria-labelledby="oss-title">
+      <p class="eyebrow">Open source</p>
+      <h2 id="oss-title">Fixes in other people's code</h2>
+      <p class="section-lead">I look for real bugs in tools I use, reduce them to a minimal reproduction, and fix them with regression tests. A few favourites:</p>
+
+      <div class="grid highlights">
+        <article class="card">
+          <p class="card-kicker"><a href="https://github.com/microsoft/agent-framework/pull/8660">microsoft/agent-framework #8660</a></p>
+          <p><code>is_type_compatible</code> special-cased <code>Any</code> only as a target type, so workflow edge validation rejected executors declaring <code>WorkflowContext[Any]</code>.</p>
+        </article>
+        <article class="card">
+          <p class="card-kicker"><a href="https://github.com/microsoft/agent-framework/pull/8648">microsoft/agent-framework #8648</a></p>
+          <p>Middleware type detection failed under <code>from __future__ import annotations</code>; postponed (PEP&nbsp;563) annotations are now resolved before dispatch.</p>
+        </article>
+        <article class="card">
+          <p class="card-kicker"><a href="https://github.com/libredb/libredb-studio/pull/1121">libredb/libredb-studio #1121</a></p>
+          <p>One <code>SELECT</code>, <code>AUTH</code> or <code>HELLO</code> could silently move or re-authenticate the Redis connection shared by every later request; now refused at the provider boundary.</p>
+        </article>
+      </div>
+
+      <div class="oss" aria-live="polite">
+<!-- OSS:START -->
+        <div>
+          <h3>Merged <span class="count">5</span></h3>
+          <ul class="pr-list">
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/microsoft/agent-framework">microsoft/agent-framework</a> · ★ 13.9k</span>
+              <span class="pr-title"><a href="https://github.com/microsoft/agent-framework/pull/8648">Fix middleware type detection with postponed annotations</a></span>
+              <span class="pill merged">Merged</span>
+            </li>
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/microsoft/agent-framework">microsoft/agent-framework</a> · ★ 13.9k</span>
+              <span class="pr-title"><a href="https://github.com/microsoft/agent-framework/pull/8660">Fix type compatibility for Any source types</a></span>
+              <span class="pill merged">Merged</span>
+            </li>
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/libredb/libredb-studio">libredb/libredb-studio</a> · ★ 1k</span>
+              <span class="pr-title"><a href="https://github.com/libredb/libredb-studio/pull/1121">Refuse commands that move the shared connection</a></span>
+              <span class="pill merged">Merged</span>
+            </li>
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/libredb/libredb-studio">libredb/libredb-studio</a> · ★ 1k</span>
+              <span class="pr-title"><a href="https://github.com/libredb/libredb-studio/pull/1082">Anchor schema diff migration copy button outside scroll area</a></span>
+              <span class="pill merged">Merged</span>
+            </li>
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/anishmehta24/OSS-Contributor-engine">anishmehta24/OSS-Contributor-engine</a></span>
+              <span class="pr-title"><a href="https://github.com/anishmehta24/OSS-Contributor-engine/pull/3">Preserve CRLF line endings when applying edits</a></span>
+              <span class="pill merged">Merged</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>In review <span class="count">7</span></h3>
+          <ul class="pr-list">
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/mermaid-js/mermaid">mermaid-js/mermaid</a> · ★ 90.5k</span>
+              <span class="pr-title"><a href="https://github.com/mermaid-js/mermaid/pull/8291">Allow milestones to be declared without a duration</a></span>
+              <span class="pill review">In review</span>
+            </li>
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/swiftlang/swift">swiftlang/swift</a> · ★ 70.4k</span>
+              <span class="pr-title"><a href="https://github.com/swiftlang/swift/pull/92586">Document source.request.relatedidents</a></span>
+              <span class="pill review">In review</span>
+            </li>
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/zulip/zulip">zulip/zulip</a> · ★ 26k</span>
+              <span class="pr-title"><a href="https://github.com/zulip/zulip/pull/40197">Fix API URL in Home Assistant documentation</a></span>
+              <span class="pill review">In review</span>
+            </li>
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/zulip/zulip">zulip/zulip</a> · ★ 26k</span>
+              <span class="pr-title"><a href="https://github.com/zulip/zulip/pull/40191">Replace deprecated URI with URL in avatar/logo settings</a></span>
+              <span class="pill review">In review</span>
+            </li>
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/pytest-dev/pytest">pytest-dev/pytest</a> · ★ 14.6k</span>
+              <span class="pr-title"><a href="https://github.com/pytest-dev/pytest/pull/15098">Fix <code>WarningsRecorder.pop()</code> returning the last match for unrelated categories</a></span>
+              <span class="pill review">In review</span>
+            </li>
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/microsoft/agent-framework">microsoft/agent-framework</a> · ★ 13.9k</span>
+              <span class="pr-title"><a href="https://github.com/microsoft/agent-framework/pull/8824">Fix tool argument validation for datetime, set and tuple parameters</a></span>
+              <span class="pill review">In review</span>
+            </li>
+            <li class="pr">
+              <span class="pr-repo"><a href="https://github.com/libredb/libredb-studio">libredb/libredb-studio</a> · ★ 1k</span>
+              <span class="pr-title"><a href="https://github.com/libredb/libredb-studio/pull/1225">Read DATE and TIMESTAMP as the stored wall clock, not a local Date</a></span>
+              <span class="pill review">In review</span>
+            </li>
+          </ul>
+        </div>
+        <p class="oss-note">This list refreshes itself daily from the GitHub API.</p>
+<!-- OSS:END -->
+      </div>
+    </section>
+
+    <section class="section wrap" id="projects" aria-labelledby="projects-title">
+      <p class="eyebrow">More projects</p>
+      <h2 id="projects-title">Other things I've built</h2>
+      <div class="grid projects">
+        <article class="card project">
+          <h3><a href="https://github.com/Aditya-XR/webChat">WebChat</a></h3>
+          <p>Real-time one-to-one chat with contact invites, blocking, read receipts, online presence and image messages.</p>
+          <ul>
+            <li>Messages are persisted before the Socket.IO emit, so history and unread counts survive disconnects</li>
+            <li>Google sign-in that links to existing email accounts</li>
+            <li>Compound MongoDB indexes shaped to the conversation queries</li>
+          </ul>
+          <ul class="chips"><li>React</li><li>Express</li><li>Socket.IO</li><li>MongoDB</li></ul>
+        </article>
+        <article class="card project">
+          <h3><a href="https://github.com/Aditya-XR/Rehabilitation">Rehabilitation booking</a></h3>
+          <p>Booking system for a rehabilitation centre: admins publish session slots, patients request them, admins approve.</p>
+          <ul>
+            <li>No double-booking: a MongoDB transaction claims the slot with one conditional update — of 8 simultaneous requests, exactly one wins</li>
+            <li>Approvals run in transactions with an audit trail of who changed what</li>
+            <li>Rotating refresh tokens in HttpOnly cookies, role-based access, rate-limited sign-in</li>
+          </ul>
+          <ul class="chips"><li>React 19</li><li>Express 5</li><li>MongoDB</li><li>shadcn/ui</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap two-col" aria-label="Achievements and skills">
+      <div>
+        <p class="eyebrow">Achievements</p>
+        <h2>Competitions</h2>
+        <ul class="timeline">
+          <li><strong>70th of 8,500+ teams</strong> — Amazon ML Challenge 2026</li>
+          <li><strong>1st place</strong> — Hatch From Scratch: AR indoor navigation app (Unity, Vuforia) with 95%+ accuracy</li>
+          <li><strong>Global rank 3,433 of 28,000+</strong> in a LeetCode weekly contest; peak rating 1605</li>
+          <li><strong>600+ DSA problems</strong> solved in C++ across competitive-programming platforms</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Skills</p>
+        <h2>What I work with</h2>
+        <dl class="skills">
+          <dt>Languages</dt><dd>Python, TypeScript, JavaScript, C++, C, SQL</dd>
+          <dt>Backend</dt><dd>FastAPI, Node.js, Express, SQLAlchemy, REST, WebSockets, Socket.IO</dd>
+          <dt>Data</dt><dd>PostgreSQL, Redis, MongoDB, SQLite</dd>
+          <dt>Frontend</dt><dd>React, TypeScript, Tailwind CSS, Vite, Tiptap</dd>
+          <dt>Tooling</dt><dd>pytest, Hypothesis, Vitest, Docker, GitHub Actions, Linux, Git</dd>
+          <dt>CS</dt><dd>Data structures &amp; algorithms, operating systems, networks, DBMS</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section wrap contact" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title">Let's talk</h2>
+      <p class="section-lead">I'm graduating from BIT Mesra (B.Tech, Computer Science and Engineering) in May 2027 and looking for SDE-1 / new-grad software engineering roles. Email is the fastest way to reach me.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:adityaccds@gmail.com">adityaccds@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/aditya-kumar-37b82627b">LinkedIn</a>
+        <a class="btn" href="https://github.com/Aditya-XR">GitHub</a>
+        <a class="btn" href="https://leetcode.com/u/adityaccds/">LeetCode</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>© 2026 Aditya Kumar · Plain HTML and CSS on GitHub Pages · the open-source list refreshes daily via GitHub Actions</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

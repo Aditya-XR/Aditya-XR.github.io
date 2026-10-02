@@ -1,0 +1,39 @@
+name: Refresh open-source list
+
+on:
+  schedule:
+    - cron: "41 1 * * *" # daily, 07:11 IST
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scripts/update_oss.py]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-oss
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild the pull request list
+        run: python3 scripts/update_oss.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet; then
+            echo "Page already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Refresh open-source contributions"
+          git push
